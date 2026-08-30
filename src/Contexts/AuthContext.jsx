@@ -11,7 +11,6 @@ function AuthProvider({ children }) {
     const res = await fetch(
       `http://localhost:8001/users?email=${email}&password=${password}`,
     );
-    await fetch(`https://users-human.free.beeceptor.com`);
 
     const data = await res.json();
     const user = data[0];
